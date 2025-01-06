@@ -707,7 +707,7 @@ thead, tbody tr {
     margin-bottom: 0;
     background-color: #b20000;
     border-radius: 0;
-    z-index: 999;
+    z-index: 998;
     background-image: url(images/cross_logo.png);
     background-size: cover; 
     background-position: center; 
