@@ -127,6 +127,7 @@
     background: none;
     border: none;
     font-size: 2vw;
+    z-index: 998;
 }
 
 .close__btn:hover {
