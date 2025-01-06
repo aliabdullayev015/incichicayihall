@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Admin Panel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">  
+            <a href="index_admin.html" id="navbar__logo">
+                <img src="images/website_logo.jpg"
+                width="29%"/>
+            </a>  
+            <div id="page__title">Admin Panel</div>
+            <ul class="navbar__menu">
+                <li id="db__btn" class="navbar__item">
+                    <a href="#" class="navbar__links">Database</a>
+                </li>
+                <li id="stats__btn" class="navbar__item">
+                    <a href="#" class="navbar__links">Statistics</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="db__form">
+        <button id="close__btn__db" class="close__btn">&#10005;</button>
+        <p class="form__title">Database</p>
+        <table id="db__table" border="1">
+            <th>№</th>
+            <th>Username</th>
+            <th>Event name</th>
+            <th>Seats</th>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <div id="stats__form">
+        <button id="close__btn__stats" class="close__btn">&#10005;</button>
+        <p class="form__title">Statistics</p>
+        <br>
+        <div class="sform__container">
+            <p class="sform__subtitle">Number of active users:</p>
+            <p class="stats" id="actv__users"></p>
+            <p class="sform__subtitle">Average number of attendance:</p>
+            <p class="stats" id="avrg__attend"></p>
+            <p class="sform__subtitle">Total number of events hosted:</p>
+            <p class="stats" id="tot__numevnt"></p>
+        </div>
+    </div>
+    <search>
+        <input type="text" id="search__evnt__name" placeholder="Search for events..">
+        <ul id="name__of__events">
+        </ul>
+    </search>
+    <form id="filter__menu"> 
+        <div id="filter__title__container">
+            <img id="filter__icon" src="images/filter_logo.png" width="11%"/>
+            <div id="filter__title">Filter Tickets</div>
+        </div>
+        <div class="text__filter">Day of the event:</div>
+        <input type="date" id="event__date">
+        <div class="text__filter">Category of the event:</div>
+        <select name="Event's category" id="event__category__dropdown" class="dropdown">
+            <option value="All">All events</option>
+            <option value="Performance">Performance</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Exhibition">Exhibition</option>
+            <option value="Ceremony">Ceremony</option>
+            <option value="Special day">Special day</option>
+        </select>
+        <div class="text__filter">Venue:</div>
+        <select name="Event's venue" id="event__venue__dropdown" class="dropdown">
+            <option value="All">Any Venue</option>
+            <option value="Inciçiçəyi">"Inciçiçəyi"</option>
+            <option value="Hall 1" disabled>Hall 1</option>
+            <option value="Hall 2" disabled>Hall 2</option>
+        </select>
+        <div>
+            <a href="#" id="button__filter">
+                Apply
+            </a>
+        </div>
+    </form>
+    <new_evnt>
+        <div onclick="window.location.href='add_event.html'" id="add__new__event">
+            +
+        </div>
+    </new_evnt>
+    <evnt>
+        <div>
+            <ul id="events__list" class="events">
+                
+           </ul>
+        </div>
+    </evnt>
+    <script type="module" src="app-admin.js"></script>
+</body>
+</html>

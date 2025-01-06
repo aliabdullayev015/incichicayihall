@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Inciçiçəyi Hall</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">  
+            <a href="index.html" id="navbar__logo">
+                <img src="images/website_logo.jpg"
+                width="29%"/>
+            </a>  
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">About us</a>
+                </li>
+                <li id="navbar__btn">
+                    <img src="images/profile_logo.png" width="25%">
+                    <a id="button__text">
+                    Account
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <form id="log__in">
+        <button id="close__btn__login" class="close__btn">&#10005;</button>
+        <p class="form__title">Login Form</p>
+        <br>
+        <input id="user__name" class="form__entry" type="text" required placeholder="Enter your username" onkeydown="if(event.key === 'Enter') event.preventDefault();"> 
+        <br>
+        <input id="user__password" class="form__entry" type="password" required placeholder="Enter your password" onkeydown="if(event.key === 'Enter') event.preventDefault();">
+        <br>
+        <button id="login__btn" class="form__btn">Log in</button>
+        <br>
+        <p class="form__text">Don't have an accout?</p>
+        <a href="#" id="link__signup">SIGN UP</a>
+    </form>
+    <form id="sign__up">
+        <button id="close__btn__signup" class="close__btn">&#10005;</button>
+        <p class="form__title">Sign up Form</p>
+        <br>
+        <input id="newuser__username" class="form__entry" type="text" required placeholder="Create a unique username ( can't contain . # $ [ ] )" onkeydown="if(event.key === 'Enter') event.preventDefault();"> 
+        <br>
+        <input id="newuser__fullname" class="form__entry" type="text" required placeholder="Enter your full name" onkeydown="if(event.key === 'Enter') event.preventDefault();"> 
+        <br>
+        <input id="newuser__children__list" class="form__entry" placeholder="Enter full names of your children going to our school (blank if N/A)">
+        <br>
+        <input id="newuser__password" class="form__entry" type="password" required placeholder="Enter password" onkeydown="if(event.key === 'Enter') event.preventDefault();">
+        <br>
+        <input id="password__confirmation" class="form__entry" type="password" required placeholder="Confirm password" onkeydown="if(event.key === 'Enter') event.preventDefault();">
+        <br>
+        <button id="signup__btn" class="form__btn">Sign up</button>
+        <br>
+        <p class="form__text">Have an accout?</p>
+        <a href="#" id="link__login">LOG IN</a>
+    </form>
+    <div id="account">
+        <button id="close__btn__acc" class="close__btn">&#10005;</button>
+        <br>
+        <br>
+        <p id="welcoming__text" class="form__text"></p>
+        <br>
+        <br>
+        <p class="form__text">Contact us:</p>
+        <a href="mailto:r.sultanov@dunyaschool.az" id="form__contact">E-Mail</a>
+        <button id="signout__btn" class="form__btn">Sign out</button>
+    </div>
+    <search>
+        <input type="text" id="search__evnt__name" placeholder="Search for events..">
+        <ul id="name__of__events">
+
+        </ul>
+    </search>
+    <form id="filter__menu"> 
+        <div id="filter__title__container">
+            <img id="filter__icon" src="images/filter_logo.png" width="11%"/>
+            <div id="filter__title">Filter Tickets</div>
+        </div>
+        <div class="text__filter">Day of the event:</div> 
+        <input type="date" id="event__date">
+        <div class="text__filter">Category of the event:</div>
+        <select name="Event's category" id="event__category__dropdown" class="dropdown">
+            <option value="All">All events</option>
+            <option value="Performance">Performance</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Exhibition">Exhibition</option>
+            <option value="Ceremony">Ceremony</option>
+            <option value="Special day">Special day</option>
+        </select>
+        <div class="text__filter">Venue:</div>
+        <select name="Event's venue" id="event__venue__dropdown" class="dropdown">
+            <option value="All">Any Venue</option>
+            <option value="Inciçiçəyi">"Inciçiçəyi"</option>
+            <option value="Hall 1" disabled>Hall 1</option>
+            <option value="Hall 2" disabled>Hall 2</option>
+        </select>
+        <div id="checkbox__container">
+            <div class="text__filter">Only show events<br>that my children<br>are taking part in</div>
+            <input type="checkbox" id="related__events__checkbox"> 
+        </div>
+        <div>
+            <a href="/" id="button__filter">
+                Apply
+            </a>
+        </div>
+    </form>
+    <evnt>
+        <div>
+            <ul id="events__list" class="events">
+                
+           </ul>
+        </div>
+    </evnt> 
+    <cart href="/" id="cart__btn">
+        <img src="images/cart_logo.png" width="70%" id="cart__logo">  
+    </cart>
+    <div id="tickets__form">
+        <button id="close__btn__tform" class="close__btn">&#10005;</button>
+        <p class="form__title" style="color: #f1f1f2; font-size: 2.2vw; text-align: center;">Your tickets</p>
+        <ul id="ticket__list">
+            
+        </ul>
+    </div>
+    <script type="module" src="user.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</body>
+</html>

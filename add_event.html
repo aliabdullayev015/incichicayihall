@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>New event</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .seat.selected {
+        background-color: #000030;
+        color: #f1f1f2;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" style="margin-bottom: 0vw; position: relative;">
+        <div class="navbar__container">  
+            <a href="index_admin.html" id="navbar__logo">
+                <img src="images/website_logo.jpg"
+                width="29%"/>
+            </a>  
+            <div id="page__title">Admin Panel</div>
+            <ul class="navbar__menu">
+                <li id="db__btn" class="navbar__item">
+                    <a href="#" class="navbar__links">Database</a>
+                </li>
+                <li id="stats__btn" class="navbar__item">
+                    <a href="#" class="navbar__links">Statistics</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="db__form">
+        <button id="close__btn__db" class="close__btn">&#10005;</button>
+        <p class="form__title">Database</p>
+        <table id="db__table" border="1">
+            <th>№</th>
+            <th>Username</th>
+            <th>Event name</th>
+            <th>Seats</th>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ali Abdullayev</td>
+                    <td>Rom & Jul.</td>
+                    <td>A1, A2, B1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="stats__form">
+        <button id="close__btn__stats" class="close__btn">&#10005;</button>
+        <p class="form__title">Statistics</p>
+        <br>
+        <div class="sform__container">
+            <p class="sform__subtitle">Number of active users:</p>
+            <p class="stats" id="actv__users">100</p>
+            <p class="sform__subtitle">Average number of attendance:</p>
+            <p class="stats" id="avrg__attend">80</p>
+            <p class="sform__subtitle">Total number of events hosted:</p>
+            <p class="stats" id="tot__numevnt">10</p>
+        </div>
+    </div>
+    <form id="inputs__container">
+        <div class="inputs">
+            <div class="new__evnt__txt">Name</div>
+            <textarea class="txt__area" id="new__evnt__name" rows="1" maxlength="50" placeholder="Max 50 characters..." required></textarea>
+        </div>
+        <div class="inputs">
+            <div class="new__evnt__txt">Short<br>Name</div>
+            <textarea class="txt__area" id="new__evnt__shname" rows="1" maxlength="15" placeholder="Max 15 characters..." required></textarea>
+        </div>
+        <div class="inputs">
+            <div class="new__evnt__txt">Description</div>
+            <textarea class="txt__area" id="new__evnt__description" maxlength="400" placeholder="Max 400 characters..." required></textarea>
+        </div>
+        <div class="inputs">
+            <div class="new__evnt__txt">Image</div>
+            <label for="new__evnt__img" id="img__input__label">Choose File (ratio 3:4)</label>
+            <input type="file" id="new__evnt__img" accept="image/*" style="display: none;">
+        </div>
+        <div class="inputs">
+            <div class="new__evnt__txt">Category of<br>the event</div>
+            <select id="new__evnt__categ" class="dropdown" required>
+                <option value="" disabled selected hidden>Select an option...</option>
+                <option value="Performance">Performance</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Exhibition">Exhibition</option>
+                <option value="Ceremony">Ceremony</option>
+                <option value="Special day">Special day</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <div class="new__evnt__txt">Venue</div>
+            <select id="new__evnt__venue" class="dropdown" required>
+                <option value="" disabled selected hidden>Select an option...</option>
+                <option value="Inciçiçəyi">"Inciçiçəyi"</option>
+                <option value="Hall 1" disabled>Hall 1</option>
+                <option value="Hall 2" disabled>Hall 2</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <div class="new__evnt__txt">Date and Time</div>
+            <input type="date" id="new__evnt__date" required>
+            <input type="time" id="new__evnt__time" required>
+        </div>
+        <div class="inputs">
+            <div class="new__evnt__txt">Cast (students)<br>of the event</div>
+            <textarea class="txt__area" id="new__evnt__cast" placeholder="e.g. (John Smith, Adel Yusuf, ...)"></textarea>
+        </div>
+        <div class="inputs">
+            <div class="new__evnt__txt">Number of seats<br>1 user can book</div>
+            <input type="number" id="new__evnt__max__book" min="1" max="170" required placeholder="1-170">
+        </div>
+        <div class="inputs">
+            <div class="new__evnt__txt">Only guardians of participating<br>children can book seats.</div>
+            <input type="checkbox" id="new__evnt__checkbox">
+        </div>
+        <div>
+            <div class="new__evnt__txt">Mark seats for "Special Guests"</div>
+            <div id="stage" style="margin-top: 5vw;">Stage</div>
+            <div class="seating-map" id="seating-map-admin"></div> 
+        </div>
+        <div class="btn">
+            <button id="new__evnt__submit">Add event</button>
+        </div>
+    </form>
+    <script type="module" src="add_event.js"></script>
+</body>
+</html>
